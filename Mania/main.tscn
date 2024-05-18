@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://h1shubd5micf"]
+
+[ext_resource type="Texture2D" uid="uid://b5lneh4rrvk3" path="res://base.png" id="1_rmkqi"]
+[ext_resource type="Texture2D" uid="uid://bqdk4tock0wqt" path="res://righthand.png" id="2_n2hn8"]
+[ext_resource type="Texture2D" uid="uid://dt6dj5ted5uqd" path="res://0010.png" id="3_mbf4b"]
+[ext_resource type="Texture2D" uid="uid://bf678vm6dxawr" path="res://0001.png" id="4_3gjhl"]
+[ext_resource type="Texture2D" uid="uid://s8uitque0e7t" path="res://0011.png" id="5_rsr4g"]
+[ext_resource type="Script" path="res://right.gd" id="6_ny71b"]
+[ext_resource type="Texture2D" uid="uid://8bki8ly1gvoo" path="res://lefthand.png" id="7_4rmjg"]
+[ext_resource type="Texture2D" uid="uid://b46g4vkgbfvpo" path="res://1000.png" id="8_ds1b4"]
+[ext_resource type="Texture2D" uid="uid://cpjfqmmpfvi4" path="res://0100.png" id="9_bbeve"]
+[ext_resource type="Texture2D" uid="uid://cr0upus4l13mc" path="res://1100.png" id="10_mwcyl"]
+[ext_resource type="Script" path="res://left.gd" id="11_ld2nx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrdef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n2hn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mbf4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3gjhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rsr4g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6414s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4rmjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ds1b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bbeve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mwcyl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Base" type="Sprite2D" parent="Node2D"]
+position = Vector2(576.556, 324.25)
+scale = Vector2(0.605093, 0.605093)
+texture = ExtResource("1_rmkqi")
+
+[node name="Right" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(576.667, 326.5)
+scale = Vector2(0.60463, 0.60463)
+sprite_frames = SubResource("SpriteFrames_hrdef")
+script = ExtResource("6_ny71b")
+
+[node name="Left" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(576, 325)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_6414s")
+script = ExtResource("11_ld2nx")
