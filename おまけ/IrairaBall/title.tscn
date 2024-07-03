@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://doylpe7pgwx4e"]
+
+[ext_resource type="Script" path="res://title.gd" id="1_g40l4"]
+
+[node name="title" type="Node"]
+script = ExtResource("1_g40l4")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 54
+text = "START"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 333.0
+offset_top = 119.0
+offset_right = 949.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 100
+text = "GAME CLEAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

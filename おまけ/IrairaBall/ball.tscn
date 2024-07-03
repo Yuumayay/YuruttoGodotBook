@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2yn5fhre45d1"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_s74qs"]
+[ext_resource type="Texture2D" uid="uid://6uwr7jw4gnti" path="res://ball.png" id="1_v1och"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8nykb"]
+friction = 0.55
+bounce = 0.63
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn51l"]
+radius = 26.1725
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3vvn"]
+radius = 26.0768
+
+[node name="ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_8nykb")
+script = ExtResource("1_s74qs")
+
+[node name="spr" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_v1och")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dn51l")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_v3vvn")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_v3vvn")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

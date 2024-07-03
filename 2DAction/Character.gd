@@ -51,6 +51,9 @@ func _physics_process(delta):
 			sprite.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if position.y > 1500:
+		UI.damage(100)
+
 	move_and_slide()
 
 func knockback():

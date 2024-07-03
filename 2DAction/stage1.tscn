@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dlc67x1otd4mj"]
+[gd_scene load_steps=30 format=3 uid="uid://dlc67x1otd4mj"]
 
 [ext_resource type="Script" path="res://stage1.gd" id="1_guv2i"]
 [ext_resource type="Script" path="res://Character.gd" id="1_yllcr"]
@@ -7,10 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://dvucnbnq0hokb" path="res://godou-san-dot.png" id="3_vh10f"]
 [ext_resource type="PackedScene" uid="uid://bl7w4jij6iiyp" path="res://coin.tscn" id="4_y78pd"]
 [ext_resource type="Texture2D" uid="uid://b8ucwtxuck60p" path="res://skybg.png" id="6_y7ogn"]
+[ext_resource type="Texture2D" uid="uid://d36cy46sjuvwy" path="res://castle_dot.png" id="8_anntr"]
 [ext_resource type="PackedScene" uid="uid://clvegma4xptft" path="res://goal.tscn" id="8_ube3j"]
+[ext_resource type="PackedScene" uid="uid://cmoit0yfrssc" path="res://omochi.tscn" id="9_xc8u1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcree"]
-size = Vector2(1161.5, 640)
+size = Vector2(1166.5, 640)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5bgh"]
+size = Vector2(136, 638)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65qou"]
+size = Vector2(72, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aswym"]
 size = Vector2(38.5, 39)
@@ -144,16 +152,126 @@ animations = [{
 [node name="Stage1" type="Node2D"]
 script = ExtResource("1_guv2i")
 
+[node name="Castle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3788, 533)
+scale = Vector2(6, 6)
+texture = ExtResource("8_anntr")
+
 [node name="Platform" type="StaticBody2D" parent="."]
 
 [node name="Shape" type="CollisionShape2D" parent="Platform"]
-position = Vector2(578.25, 923)
+position = Vector2(580.75, 923)
 shape = SubResource("RectangleShape2D_tcree")
 
 [node name="Rect" type="Sprite2D" parent="Platform"]
 texture_filter = 1
-position = Vector2(578.5, 922.5)
-scale = Vector2(7.24375, 3.99375)
+position = Vector2(581.5, 922.5)
+scale = Vector2(7.28125, 3.99375)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(2837, 0)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(580.75, 923)
+shape = SubResource("RectangleShape2D_tcree")
+
+[node name="Rect" type="Sprite2D" parent="Platform2"]
+texture_filter = 1
+position = Vector2(581.5, 922.5)
+scale = Vector2(7.28125, 3.99375)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(1507, -74)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_p5bgh")
+
+[node name="Rect" type="Sprite2D" parent="Platform3"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.843751, 3.99375)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(1277, -50)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform4"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_p5bgh")
+
+[node name="Rect" type="Sprite2D" parent="Platform4"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.843751, 3.99375)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(1046, -539)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform5"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_65qou")
+
+[node name="Rect" type="Sprite2D" parent="Platform5"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.456251, 0.45625)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(1724, -385)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform6"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_65qou")
+
+[node name="Rect" type="Sprite2D" parent="Platform6"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.456251, 0.45625)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(1974, -414)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform7"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_65qou")
+
+[node name="Rect" type="Sprite2D" parent="Platform7"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.456251, 0.45625)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(2221, -357)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform8"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_65qou")
+
+[node name="Rect" type="Sprite2D" parent="Platform8"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.456251, 0.45625)
+texture = ExtResource("2_xcqte")
+
+[node name="Platform9" type="StaticBody2D" parent="."]
+position = Vector2(2470, -394)
+
+[node name="Shape" type="CollisionShape2D" parent="Platform9"]
+position = Vector2(66, 922)
+shape = SubResource("RectangleShape2D_65qou")
+
+[node name="Rect" type="Sprite2D" parent="Platform9"]
+texture_filter = 1
+position = Vector2(66.5001, 922.5)
+scale = Vector2(0.456251, 0.45625)
 texture = ExtResource("2_xcqte")
 
 [node name="Character" type="CharacterBody2D" parent="."]
@@ -176,6 +294,10 @@ animation = &"idle"
 
 [node name="Enemy" parent="." instance=ExtResource("2_cpwk0")]
 position = Vector2(743, 467)
+can_tread = true
+
+[node name="Enemy6" parent="." instance=ExtResource("2_cpwk0")]
+position = Vector2(3951, 531)
 can_tread = true
 
 [node name="Coin" parent="." instance=ExtResource("4_y78pd")]
@@ -202,7 +324,7 @@ scale = Vector2(4, 4)
 texture = ExtResource("6_y7ogn")
 
 [node name="Goal" parent="." instance=ExtResource("8_ube3j")]
-position = Vector2(1092, 587)
+position = Vector2(3674, 591)
 
 [node name="Enemy2" parent="." instance=ExtResource("2_cpwk0")]
 position = Vector2(157, 475)
@@ -211,3 +333,9 @@ can_tread = true
 [node name="Enemy3" parent="." instance=ExtResource("2_cpwk0")]
 position = Vector2(366, 466)
 can_tread = true
+
+[node name="Enemy4" parent="." instance=ExtResource("9_xc8u1")]
+position = Vector2(3894, 528)
+
+[node name="Enemy5" parent="." instance=ExtResource("9_xc8u1")]
+position = Vector2(1093, 292)

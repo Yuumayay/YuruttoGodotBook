@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 @export var move_speed: int
+@export var move_direction: int = 1
 @export var can_tread: bool
+
+@onready var sprite = $Sprite
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -14,7 +17,11 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	velocity.x = move_speed
+	velocity.x = move_speed * move_direction
+	if move_direction == -1:
+		sprite.flip_h = true
+	else:
+		sprite.flip_h = false
 	move_and_slide()
 
 

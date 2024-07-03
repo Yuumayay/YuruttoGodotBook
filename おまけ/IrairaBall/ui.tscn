@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://xnje356km0ec"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_ujii1"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_ujii1")
+
+[node name="time" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 50
+
+[node name="lvl" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2

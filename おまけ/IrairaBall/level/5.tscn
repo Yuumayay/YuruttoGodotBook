@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ru554jhhr4qt"]
+
+[ext_resource type="PackedScene" uid="uid://cbkil778n35cs" path="res://level.tscn" id="1_rgbwe"]
+
+[node name="level" instance=ExtResource("1_rgbwe")]
+
+[node name="map" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(589828, 0, 0, 458757, 0, 1, 589829, 0, 0, 589830, 0, 0, 655368, 0, 0, 720906, 0, 0, 786444, 0, 0, 851982, 0, 0, 917520, 0, 0, 983058, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 720931, 0, 0, 655396, 0, 0)
+
+[node name="spawn" parent="." index="1"]
+position = Vector2(1170, 284)

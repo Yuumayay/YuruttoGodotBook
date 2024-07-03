@@ -19,6 +19,7 @@ func damage(value):
 	hp -= value
 	health.value = hp
 	if hp <= 0:
+		await get_tree().create_timer(0.01).timeout
 		coin = 0
 		hp = 100
 		health.value = hp
