@@ -1,5 +1,5 @@
 ## ゆるっとはじめるGodot Engineゲームプログラミング サポートサイト
-<img alt="1章" src="https://github.com/Yuumayay/YuumayayGodotBook1/assets/3530659/b9804073-3a47-4e64-9179-479f3696c5c7" width="20%">
+<img alt="表紙" src="https://github.com/user-attachments/assets/3b3db9dc-0e74-43ca-8207-61b690d73eda" width="20%">
 
 ### 説明
 
