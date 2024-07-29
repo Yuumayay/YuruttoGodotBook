@@ -29,5 +29,8 @@ https://www.youtube.com/shorts/D02C0EogwWA
 
 
 ## 誤植・修正情報
-
 誤植がありましたら書籍巻末にあるメールアドレスやissueにてご連絡頂ければ幸いです。
+
+- 2024/07/29 2Dアクションの素材集にcoin.png、ground.pngが欠けていたため修正
+
+
