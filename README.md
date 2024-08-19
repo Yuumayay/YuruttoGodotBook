@@ -43,4 +43,4 @@ https://www.youtube.com/shorts/D02C0EogwWA
 
 ゲームアセット画像、音楽、効果音：Copyright © 2023 Yuumayay All Rights Reserved.
 
-ゴドウさん・デバグ博士・エラーくん キャラクターデザイン：Copyright © 2023 やいぎ All Rights Reserved.
+キャラクターデザイン：Copyright © 2023 やいぎ All Rights Reserved.
