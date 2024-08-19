@@ -34,3 +34,13 @@ https://www.youtube.com/shorts/D02C0EogwWA
 - 2024/07/29 2Dアクションの素材集にcoin.png、ground.pngが欠けていたため修正
 
 
+## 利用について
+サンプルコードは自由に改変して利用が可能です。ただし、以下の用途にはご利用頂けません。
+- アダルトコンテンツ、政治利用、著作権利者の不利益、Godot Engineの不利益となる利用法
+
+
+素材集についても自分のゲームに利用可能ですが、著作権は放棄していません。
+
+ゲームアセット画像、音楽、効果音：Copyright © 2023 Yuumayay All Rights Reserved.
+
+ゴドウさん・デバグ博士・エラーくん キャラクターデザイン：Copyright © 2023 やいぎ All Rights Reserved.
