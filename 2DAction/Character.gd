@@ -5,18 +5,15 @@ var can_move: bool = true
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 @onready var sprite = $Sprite
 
 var state = "stand"
 
-func _physics_process(delta):
-	# Add the gravity.
+func _physics_process(delta : float):
+	# 重力を加える
 	if not is_on_floor():
 		state = "fall"
-		velocity.y += gravity * delta
+		velocity += get_gravity() * delta
 		if velocity.y > 0.0:
 			sprite.play("fall")
 		else:
@@ -28,13 +25,13 @@ func _physics_process(delta):
 			await sprite.animation_looped
 			state = "stand"
 
-	# Handle Jump.
+	# ジャンプ処理
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		Audio.get_node("Jump").play()
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# 入力方向を取得し、移動・減速を処理
+	# ui_left ui_rightは自分のアクションに置き換えたほうがいいよ
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if !can_move:
 		pass
@@ -51,6 +48,7 @@ func _physics_process(delta):
 			sprite.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	# y=1500よりさらに落下した場合、やられる
 	if position.y > 1500:
 		UI.damage(100)
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfigxlakw6e6u" path="res://bg.png" id="1_jcbt0"]
 [ext_resource type="Texture2D" uid="uid://pbeudqg3agqb" path="res://apple.png" id="1_t62ii"]
-[ext_resource type="Script" path="res://apple.gd" id="2_4rrby"]
+[ext_resource type="Script" uid="uid://duwar0lb0jba6" path="res://apple.gd" id="2_4rrby"]
 
 [node name="Node2D" type="Node2D"]
 
