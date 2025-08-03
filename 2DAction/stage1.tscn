@@ -301,7 +301,7 @@ sprite_frames = SubResource("SpriteFrames_mjdrw")
 animation = &"walk"
 
 [node name="Enemy" parent="." instance=ExtResource("2_cpwk0")]
-position = Vector2(743, 467)
+position = Vector2(86, 395)
 can_tread = true
 
 [node name="Enemy6" parent="." instance=ExtResource("2_cpwk0")]
