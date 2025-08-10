@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cmoit0yfrssc"]
 
-[ext_resource type="Script" path="res://Enemy.gd" id="1_272eq"]
+[ext_resource type="Script" uid="uid://mt4y78gnsrqt" path="res://Enemy.gd" id="1_272eq"]
 [ext_resource type="Texture2D" uid="uid://nbqpjv3ys6u1" path="res://omochi_dot_anim.png" id="2_46c3y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxu1k"]
