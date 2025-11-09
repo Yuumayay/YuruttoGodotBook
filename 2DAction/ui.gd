@@ -1,10 +1,10 @@
 extends CanvasLayer
 
 var coin = 0
-@onready var label = $Label
+@onready var label : Label = $Label
 
 var hp = 100
-@onready var health = $Health
+@onready var health : ProgressBar = $Health
 
 func coin_add(value):
 	coin += value
