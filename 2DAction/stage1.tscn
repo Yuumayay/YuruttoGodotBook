@@ -332,10 +332,16 @@ position = Vector2(366, 466)
 can_tread = true
 
 [node name="Enemy4" parent="." instance=ExtResource("9_xc8u1")]
-position = Vector2(3894, 528)
+position = Vector2(3552, 480)
+
+[node name="Enemy8" parent="." instance=ExtResource("9_xc8u1")]
+position = Vector2(3312, 480)
 
 [node name="Enemy5" parent="." instance=ExtResource("9_xc8u1")]
 position = Vector2(1093, 292)
+
+[node name="Enemy7" parent="." instance=ExtResource("9_xc8u1")]
+position = Vector2(1536, 192)
 
 [node name="Coin5" parent="." instance=ExtResource("4_y78pd")]
 position = Vector2(1296, 480)
